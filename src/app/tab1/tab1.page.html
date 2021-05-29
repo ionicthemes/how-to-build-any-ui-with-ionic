@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Level #1
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,70 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Level #1</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="ion-padding">
+    <p>Let's customize Ionic Components by using <b>CSS variables</b> and <b>Shadow Parts</b>.</p>
+
+    <h1 class="ion-text-center">Ion Checkbox</h1>
+    <p class="ion-text-center">Check out all the <a href="https://ionicframework.com/docs/api/checkbox#css-custom-properties" target="_blank">CSS Custom Properties</a> and <a href="https://ionicframework.com/docs/api/checkbox#css-shadow-parts" target="_blank">Shadow Parts</a> available for customization.</p>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-label>CSS Properties</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Raw checkbox</ion-label>
+        <ion-checkbox slot="start" value="sports"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Background Color</ion-label>
+        <ion-checkbox slot="start" value="music" style="--background:grey" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Border Color</ion-label>
+        <ion-checkbox slot="start" value="music" style="--border-color:red"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Square (border radius)</ion-label>
+        <ion-checkbox slot="start" value="fashion" color="secondary" style="--border-radius: 0px;"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Round (border radius)</ion-label>
+        <ion-checkbox slot="start" value="fashion" color="secondary" style="--border-radius: 50%;"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Checkmark width</ion-label>
+        <ion-checkbox slot="start" value="fashion" color="secondary" style="--border-radius: 0px; --checkmark-width: 6px;"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Size</ion-label>
+        <ion-checkbox slot="start" value="fashion" color="secondary" style="--size: 26px;"></ion-checkbox>
+      </ion-item>
+
+      <ion-list-header>
+        <ion-label>Shadow Parts</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Custom Mark Icon</ion-label>
+        <ion-checkbox slot="start" value="meditation" class="custom-mark-star" mode="ios"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Custom Mark Icon</ion-label>
+        <ion-checkbox slot="start" value="health" class="custom-mark-add" mode="ios"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Custom Mark & Animation</ion-label>
+        <ion-checkbox #animatedIcon slot="start" value="food" class="custom-mark-heart" (ionChange)="animate()" mode="ios"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

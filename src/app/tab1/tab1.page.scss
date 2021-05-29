@@ -1,0 +1,68 @@
+.square-checkbox {
+  --border-radius: 0px;
+  --checkmark-width: 4px;
+}
+
+.custom-mark-add {
+  --checkmark-color: #FFF;
+  --checkmark-width: 4px;
+  --background-checked: var(--ion-color-success);
+  --border-color-checked: var(--ion-color-success);
+  --border-color: var(--ion-color-success);
+  --border-radius: 10px;
+  --size: 28px;
+
+  &::part(mark) {
+    // this is the svg of the checkbox icon
+    // add icon
+    d: path("M18.75 12H5.25M12 5.25V18.75V5.25Z");
+  }
+}
+
+.custom-mark-star {
+  --checkmark-color: var(--ion-color-warning);
+  --checkmark-width: 1px;
+  --background: transparent;
+  --border-color: transparent;
+  --background-checked: transparent;
+  --border-color-checked: transparent;
+  --size: 28px;
+
+  &::part(mark) {
+    // this is the svg of the checkbox icon
+    // star icon
+    d: path("M22.5 9.75H14.4375L12 2.25L9.5625 9.75H1.5L8.0625 14.25L5.53125 21.75L12 17.0625L18.4688 21.75L15.9375 14.25L22.5 9.75Z");
+  }
+
+  &.checkbox-checked::part(mark) {
+    fill: var(--ion-color-warning);;
+  }
+
+  &::part(mark) {
+    opacity: 1;
+  }
+}
+
+.custom-mark-heart {
+  --checkmark-color: var(--ion-color-danger);
+  --checkmark-width: 2px;
+  --background: transparent;
+  --border-color: transparent;
+  --background-checked: transparent;
+  --border-color-checked: transparent;
+  --size: 28px;
+
+  &::part(mark) {
+    // this is the svg of the checkbox icon
+    // heart icon
+    d: path("M12 21L11.5782 20.7188C9.57284 19.3795 7.0355 17.8659 5.15628 15.6412C3.17581 13.2975 2.22565 10.8905 2.25003 8.28187C2.27956 5.36906 4.61534 3 7.4569 3C9.71206 3 11.2116 4.3125 12 5.25984C12.7885 4.3125 14.288 3 16.5432 3C19.3847 3 21.7205 5.36906 21.75 8.28047C21.7763 10.8905 20.8261 13.2961 18.8438 15.6398C16.9646 17.8659 14.4272 19.3795 12.4219 20.7188L12 21Z");
+  }
+
+  &.checkbox-checked::part(mark) {
+    fill: var(--ion-color-danger);
+  }
+
+  &::part(mark) {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,26 @@
+.checkbox-content {
+  background: var(--img-src), rgba(0, 0, 0, .40);
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  aspect-ratio: 1 / 1;
+
+  .checkbox-title {
+    color: var(--ion-color-light);
+    font-weight: bold;
+    align-self: flex-end;
+    margin: 8px;
+    font-size: 20px;
+  }
+
+  .checkbox-item {
+    --background: transparent;
+    --border-color: var(--ion-color-light);
+    --size: 32px;
+    margin: 8px;
+  }
+}

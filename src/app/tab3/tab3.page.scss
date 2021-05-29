@@ -1,0 +1,48 @@
+.custom-checkbox {
+
+  .checkbox-content {
+    background: var(--img-src), rgba(0, 0, 0, .40);
+    background-size: cover;
+    background-blend-mode: overlay;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    aspect-ratio: 1 / 1;
+  }
+
+  .checkbox-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--ion-color-light);
+    text-align: center;
+    word-break: break-word;
+    overflow: visible;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    // vertically centered
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .checkbox-item {
+    --border-radius: 0px;
+    --border-width: 10vw;
+    --border-color: transparent;
+    --border-color-checked: transparent;
+    --background: transparent;
+    --background-checked: rgba(var(--ion-color-secondary-rgb), .4);
+    --checkmark-width: 2px;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &.checkbox-checked {
+    .checkbox-title {
+      display: none;
+    }
+  }
+}
