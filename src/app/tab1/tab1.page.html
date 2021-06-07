@@ -25,35 +25,37 @@
       </ion-list-header>
       <ion-item>
         <ion-label>Raw checkbox</ion-label>
-        <ion-checkbox slot="start" value="sports"></ion-checkbox>
+        <ion-checkbox slot="start" value="raw" checked></ion-checkbox>
       </ion-item>
       <ion-item>
         <ion-label>Background Color</ion-label>
-        <ion-checkbox slot="start" value="music" style="--background:grey" color="dark"></ion-checkbox>
+        <ion-checkbox slot="start" value="backgroundColor" style="--background:grey" color="dark"></ion-checkbox>
       </ion-item>
       <ion-item>
         <ion-label>Border Color</ion-label>
-        <ion-checkbox slot="start" value="music" style="--border-color:red"></ion-checkbox>
+        <ion-checkbox slot="start" value="borderColor" style="--border-color:red" color="danger"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Square (border radius)</ion-label>
-        <ion-checkbox slot="start" value="fashion" color="secondary" style="--border-radius: 0px;"></ion-checkbox>
+        <ion-label>Square & Red</ion-label>
+        <ion-checkbox slot="start" value="squareAndRed" checked style="--border-radius:0px; --border-color:red; --background-checked:red; --border-color-checked:red;">
+        </ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Round (border radius)</ion-label>
-        <ion-checkbox slot="start" value="fashion" color="secondary" style="--border-radius: 50%;"></ion-checkbox>
+        <ion-label>Round</ion-label>
+        <ion-checkbox slot="start" value="round" color="secondary" style="--border-radius: 50%;"></ion-checkbox>
       </ion-item>
 
       <ion-item>
         <ion-label>Checkmark width</ion-label>
-        <ion-checkbox slot="start" value="fashion" color="secondary" style="--border-radius: 0px; --checkmark-width: 6px;"></ion-checkbox>
+        <ion-checkbox slot="start" value="checkmarkWidth" checked color="secondary" style="--border-radius: 0px; --checkmark-width: 4px;">
+        </ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Size</ion-label>
-        <ion-checkbox slot="start" value="fashion" color="secondary" style="--size: 26px;"></ion-checkbox>
+        <ion-label>Bigger Size</ion-label>
+        <ion-checkbox slot="start" value="bigger" checked color="secondary" style="--size: 40px;"></ion-checkbox>
       </ion-item>
 
       <ion-list-header>
@@ -61,17 +63,18 @@
       </ion-list-header>
       <ion-item>
         <ion-label>Custom Mark Icon</ion-label>
-        <ion-checkbox slot="start" value="meditation" class="custom-mark-star" mode="ios"></ion-checkbox>
+        <ion-checkbox slot="start" value="customStarCheckmark" class="custom-mark-star" mode="ios"></ion-checkbox>
       </ion-item>
 
       <ion-item>
         <ion-label>Custom Mark Icon</ion-label>
-        <ion-checkbox slot="start" value="health" class="custom-mark-add" mode="ios"></ion-checkbox>
+        <ion-checkbox slot="start" value="customAddCheckmark" checked class="custom-mark-add" mode="ios"></ion-checkbox>
       </ion-item>
 
       <ion-item>
         <ion-label>Custom Mark & Animation</ion-label>
-        <ion-checkbox #animatedIcon slot="start" value="food" class="custom-mark-heart" (ionChange)="animate()" mode="ios"></ion-checkbox>
+        <ion-checkbox #animatedIcon slot="start" value="customHeartCheckmark" class="custom-mark-heart" (ionChange)="animate()" mode="ios">
+        </ion-checkbox>
       </ion-item>
     </ion-list>
   </div>

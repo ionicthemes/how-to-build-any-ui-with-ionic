@@ -1,27 +1,5 @@
-.task-wrapper {
-  .followers-list {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-
-    .follower-image-container {
-      margin-right: -14px;
-      flex: 0 0 15%;
-      max-width: 45px;
-      aspect-ratio: 1 / 1;
-
-      .follower-image {
-        border: solid 4px #FFF;
-      }
-    }
-  }
-  .follower-image {
-    border-radius: 50%;
-    // overlay-background: #{palette-color('grey-0', 0.25)};
-  }
-}
-
 .custom-checkbox {
+
   .checkbox-content {
     background: var(--img-src), rgba(0, 0, 0, .40);
     background-size: cover;

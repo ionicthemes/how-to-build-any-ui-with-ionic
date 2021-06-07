@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Level #3
+      Level #4
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,50 +9,22 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Level #3</ion-title>
+      <ion-title size="large">Level #4</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div class="ion-padding">
-    <p>Add an element wrapper component and use it to enhance the element styles.</p>
+    <p>Add Angular Reactive <b>Forms</b> and Validators.</p>
 
     <h1 class="ion-text-center">What are you interested in?</h1>
-    <p class="ion-text-center">Pick whatever catches your eye. You can always fine-tune things later.</p>
+    <p class="ion-text-center">Select at least 2 options.</p>
 
-    <ion-card class="task-wrapper">
-      <ion-card-content>
-        <div style="display:flex;">
-          <ion-checkbox></ion-checkbox>
-          <p>Create presentation for Ionconf</p>
-        </div>
-        <div class="followers-list">
-          <div class="follower-image-container">
-            <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
-          </div>
-          <div class="follower-image-container">
-            <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
-          </div>
-          <div class="follower-image-container">
-            <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
-          </div>
-        </div>
-        <!-- <span><b>Progress</b></span>
-        <ion-progress-bar value="0.5"></ion-progress-bar> -->
-        <ion-chip>
-          <ion-label>Marketing</ion-label>
-        </ion-chip>
-        <!-- <ion-chip>
-          <ion-label>Bug</ion-label>
-        </ion-chip> -->
-      </ion-card-content>
-    </ion-card>
-
-    <ion-row>
+    <ion-row [formGroup]="exampleForm">
       <ion-col size="6">
         <app-custom-checkbox class="custom-checkbox">
           <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb)'">
             <ion-label class="checkbox-title">Food</ion-label>
-            <ion-checkbox class="checkbox-item" checked value="food"></ion-checkbox>
+            <ion-checkbox class="checkbox-item" formControlName="food" checked></ion-checkbox>
           </div>
         </app-custom-checkbox>
       </ion-col>
@@ -60,17 +32,15 @@
         <app-custom-checkbox class="custom-checkbox">
           <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/6102505/pexels-photo-6102505.jpeg?auto=compress&cs=tinysrgb)'">
             <ion-label class="checkbox-title">Hike</ion-label>
-            <ion-checkbox class="checkbox-item" value="hike"></ion-checkbox>
+            <ion-checkbox class="checkbox-item" formControlName="hike"></ion-checkbox>
           </div>
         </app-custom-checkbox>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col size="6">
         <app-custom-checkbox class="custom-checkbox">
           <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg?auto=compress&cs=tinysrgb)'">
             <ion-label class="checkbox-title">Travel</ion-label>
-            <ion-checkbox class="checkbox-item" value="travel"></ion-checkbox>
+            <ion-checkbox class="checkbox-item" formControlName="travel"></ion-checkbox>
           </div>
         </app-custom-checkbox>
       </ion-col>
@@ -78,7 +48,7 @@
         <app-custom-checkbox class="custom-checkbox">
           <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb)'">
             <ion-label class="checkbox-title">Fashion</ion-label>
-            <ion-checkbox class="checkbox-item" value="fashion"></ion-checkbox>
+            <ion-checkbox class="checkbox-item" formControlName="fashion"></ion-checkbox>
           </div>
         </app-custom-checkbox>
       </ion-col>

@@ -3,8 +3,8 @@ import { IonCheckbox } from '@ionic/angular';
 
 @Component({
   selector: 'app-custom-checkbox',
-  templateUrl: './custom-checkbox.component.html',
-  styleUrls: ['./custom-checkbox.component.scss'],
+  template: '<ng-content></ng-content>',
+  styles: [':host { display: block; }'],
 })
 
 export class CustomCheckboxComponent {
@@ -20,7 +20,7 @@ export class CustomCheckboxComponent {
     // set the checked state
     this.isChecked = this.checkbox.checked;
 
-    // Subscribe to changes
+    // subscribe to changes
     this.checkbox.ionChange.subscribe(changes => {
       this.isChecked = changes.detail.checked;
     });
