@@ -19,39 +19,30 @@
     <h1 class="ion-text-center">What are you interested in?</h1>
     <p class="ion-text-center">Select at least 2 options.</p>
 
-    <ion-row [formGroup]="exampleForm">
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Food</ion-label>
-            <ion-checkbox class="checkbox-item" formControlName="food" checked></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/6102505/pexels-photo-6102505.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Hike</ion-label>
-            <ion-checkbox class="checkbox-item" formControlName="hike"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Travel</ion-label>
-            <ion-checkbox class="checkbox-item" formControlName="travel"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Fashion</ion-label>
-            <ion-checkbox class="checkbox-item" formControlName="fashion"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-    </ion-row>
+    <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
+      <ion-row>
+        <ion-col size="6" formArrayName="interests" *ngFor="let interest of exampleForm.controls.interests.controls; let i=index;">
+          <app-custom-checkbox class="custom-checkbox">
+            <div class="checkbox-content" [style.--img-src]="interestsList[i].image">
+              <ion-label class="checkbox-title"> {{interestsList[i].name}}</ion-label>
+              <ion-checkbox class="checkbox-item" [formControl]="interest"></ion-checkbox>
+            </div>
+          </app-custom-checkbox>
+        </ion-col>
+      </ion-row>
+      <ion-button class="submit-btn" expand="block" type="submit" fill="solid" [disabled]="!exampleForm.valid">SUBMIT</ion-button>
+      <div class="error-message-container" *ngIf="!exampleForm.valid">
+        <div class="error-message">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ submitError }}</span>
+        </div>
+      </div>
+      <div class="success-message-container" *ngIf="exampleForm.valid && submitSuccess">
+        <div class="success-message">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+          <span>{{ submitSuccess }}</span>
+        </div>
+      </div>
+    </form>
   </div>
 </ion-content>
