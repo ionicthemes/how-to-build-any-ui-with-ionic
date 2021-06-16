@@ -1,70 +1,177 @@
-.task-wrapper {
-  .followers-list {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+.tasks-example {
+  .task-wrapper {
+    &.checkbox-checked {
+      opacity: 0.5;
 
-    .follower-image-container {
-      margin-right: -14px;
-      flex: 0 0 15%;
-      max-width: 45px;
-      aspect-ratio: 1 / 1;
+      .task-checkbox {
+        --checkmark-color: #FFF;
+      }
+    }
 
-      .follower-image {
-        border: solid 4px #FFF;
+    .task-checkbox {
+      --size: 20px;
+      --checkmark-width: 2px;
+      --border-color: var(--ion-color-medium);
+      --checkmark-color: var(--ion-color-medium);
+
+      &::part(mark) {
+        opacity: 1;
+      }
+    }
+
+    .task-title {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ion-color-dark-tint);
+    }
+
+    .task-content {
+      display: flex;
+      margin-top: 16px;
+      align-items: center;
+      justify-content: space-between;
+
+      .task-owner-image {
+        width: 35px;
+        aspect-ratio: 1 / 1;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .task-due-date {
+        margin-left: 12px;
+        color: var(--ion-color-medium);
+      }
+
+      .task-icons {
+        flex-grow: 2;
+        text-align: right;
+        color: var(--ion-color-medium);
+      }
+
+      .icon-number {
+        vertical-align: middle;
+        margin-left: 12px;
+        margin-right: 3px;
+        color: var(--ion-color-medium);
+      }
+
+      ion-icon {
+        vertical-align: middle;
       }
     }
   }
-  .follower-image {
-    border-radius: 50%;
-    // overlay-background: #{palette-color('grey-0', 0.25)};
+}
+
+
+.meetings-example {
+  .meeting-wrapper {
+    --background: rgba(var(--card-color), 10%);
+    --custom-color: rgb(var(--card-color));
+
+    .meeting-card-content {
+      border-left: var(--custom-color) solid 5px;
+
+      .checkbox-col {
+        align-self: center;
+        text-align: center;
+        --ion-grid-column-padding: 0px;
+
+        ion-checkbox {
+          --border-color: var(--custom-color);
+          --background-checked: var(--custom-color);
+          --border-color-checked: var(--custom-color);
+          --checkmark-width: 2px;
+        }
+
+        .confirm-text {
+          font-size: 11px;
+          color: var(--custom-color);
+        }
+      }
+    }
+
+    .meeting-title {
+      font-weight: bolder;
+    }
+
+    .meeting-hours {
+
+    }
+
+    .followers-list {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      .follower-image-container {
+        margin-right: -14px;
+        flex: 0 0 20%;
+        max-width: 45px;
+        aspect-ratio: 1 / 1;
+
+        .follower-image {
+          border: solid 2px #fff;
+        }
+      }
+    }
+    .follower-image {
+      border-radius: 50%;
+      // overlay-background: #{palette-color('grey-0', 0.25)};
+    }
   }
 }
 
-.custom-checkbox {
-  .checkbox-content {
-    background: var(--img-src), rgba(0, 0, 0, .40);
-    background-size: cover;
-    background-blend-mode: overlay;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    aspect-ratio: 1 / 1;
-
-    .checkbox-title {
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 24px;
-      color: var(--ion-color-light);
-      text-align: center;
-      word-break: break-word;
-      overflow: visible;
-      position: absolute;
-      width: 70%;
-      left: 15%;
-      // vertically centered
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .checkbox-item {
-      --border-radius: 0px;
-      --border-width: 10vw;
-      --border-color: transparent;
-      --border-color-checked: transparent;
-      --background: transparent;
-      --background-checked: rgba(var(--ion-color-secondary-rgb), .4);
-      --checkmark-width: 2px;
-
+.custom-checkboxes-example {
+  .custom-checkbox {
+    .checkbox-content {
+      background: var(--img-src), rgba(0, 0, 0, .40);
+      background-size: cover;
+      background-blend-mode: overlay;
+      display: flex;
       height: 100%;
       width: 100%;
-    }
-  }
+      justify-content: space-between;
+      aspect-ratio: 1 / 1;
 
-  &.checkbox-checked {
-    .checkbox-title {
-      display: none;
+      .checkbox-title {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 24px;
+        color: var(--ion-color-light);
+        text-align: center;
+        word-break: break-word;
+        overflow: visible;
+        position: absolute;
+        width: 70%;
+        left: 15%;
+        // vertically centered
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .checkbox-item {
+        --border-radius: 0px;
+        --border-width: 10vw;
+        --border-color: transparent;
+        --border-color-checked: transparent;
+        --background: transparent;
+        --background-checked: rgba(var(--ion-color-secondary-rgb), .4);
+        --checkmark-width: 2px;
+
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &.checkbox-checked {
+      .checkbox-title {
+        display: none;
+      }
     }
   }
 }

@@ -18,70 +18,144 @@
 
     <h1 class="ion-text-center">What are you interested in?</h1>
     <p class="ion-text-center">Pick whatever catches your eye. You can always fine-tune things later.</p>
+    <div class="custom-checkboxes-example">
+      <ion-row>
+        <ion-col size="6">
+          <app-custom-checkbox class="custom-checkbox">
+            <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb)'">
+              <ion-label class="checkbox-title">Food</ion-label>
+              <ion-checkbox class="checkbox-item" checked value="food"></ion-checkbox>
+            </div>
+          </app-custom-checkbox>
+        </ion-col>
+        <ion-col size="6">
+          <app-custom-checkbox class="custom-checkbox">
+            <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/6102505/pexels-photo-6102505.jpeg?auto=compress&cs=tinysrgb)'">
+              <ion-label class="checkbox-title">Hike</ion-label>
+              <ion-checkbox class="checkbox-item" value="hike"></ion-checkbox>
+            </div>
+          </app-custom-checkbox>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <app-custom-checkbox class="custom-checkbox">
+            <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg?auto=compress&cs=tinysrgb)'">
+              <ion-label class="checkbox-title">Travel</ion-label>
+              <ion-checkbox class="checkbox-item" value="travel"></ion-checkbox>
+            </div>
+          </app-custom-checkbox>
+        </ion-col>
+        <ion-col size="6">
+          <app-custom-checkbox class="custom-checkbox">
+            <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb)'">
+              <ion-label class="checkbox-title">Fashion</ion-label>
+              <ion-checkbox class="checkbox-item" value="fashion"></ion-checkbox>
+            </div>
+          </app-custom-checkbox>
+        </ion-col>
+      </ion-row>
+    </div>
 
-    <ion-card class="task-wrapper">
-      <ion-card-content>
-        <div style="display:flex;">
-          <ion-checkbox></ion-checkbox>
-          <p>Create presentation for Ionconf</p>
-        </div>
-        <div class="followers-list">
-          <div class="follower-image-container">
-            <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
-          </div>
-          <div class="follower-image-container">
-            <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
-          </div>
-          <div class="follower-image-container">
-            <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
-          </div>
-        </div>
-        <!-- <span><b>Progress</b></span>
-        <ion-progress-bar value="0.5"></ion-progress-bar> -->
-        <ion-chip>
-          <ion-label>Marketing</ion-label>
-        </ion-chip>
-        <!-- <ion-chip>
-          <ion-label>Bug</ion-label>
-        </ion-chip> -->
-      </ion-card-content>
-    </ion-card>
-
-    <ion-row>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Food</ion-label>
-            <ion-checkbox class="checkbox-item" checked value="food"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/6102505/pexels-photo-6102505.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Hike</ion-label>
-            <ion-checkbox class="checkbox-item" value="hike"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Travel</ion-label>
-            <ion-checkbox class="checkbox-item" value="travel"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-      <ion-col size="6">
-        <app-custom-checkbox class="custom-checkbox">
-          <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb)'">
-            <ion-label class="checkbox-title">Fashion</ion-label>
-            <ion-checkbox class="checkbox-item" value="fashion"></ion-checkbox>
-          </div>
-        </app-custom-checkbox>
-      </ion-col>
-    </ion-row>
+    <h1 class="ion-text-center">Other UI examples</h1>
+    <p class="ion-text-center">Using the same Ion Checkbox</p>
+    <h3>Tasks</h3>
+    <div class="tasks-example">
+      <app-custom-checkbox class="task-wrapper">
+        <ion-card>
+          <ion-card-content>
+            <div style="display:flex;">
+              <ion-checkbox class="task-checkbox"></ion-checkbox>
+              <p class="task-title">Newsletter signup form</p>
+            </div>
+            <div class="task-content">
+              <div class="task-owner-image">
+                <img class="follower-image" src="https://randomuser.me/api/portraits/women/44.jpg">
+              </div>
+              <p class="task-due-date">June 26</p>
+              <div class="task-icons">
+                <span class="icon-number">4</span>
+                <ion-icon name="chatbubble-outline"></ion-icon>
+                <span class="icon-number">2</span>
+                <ion-icon style="transform: rotate(90deg);" name="git-branch-outline"></ion-icon>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </app-custom-checkbox>
+      <app-custom-checkbox class="task-wrapper">
+        <ion-card>
+          <ion-card-content>
+            <div style="display:flex;">
+              <ion-checkbox class="task-checkbox" checked></ion-checkbox>
+              <p class="task-title">IoniConf talk slides</p>
+            </div>
+            <div class="task-content">
+              <div class="task-owner-image">
+                <img class="follower-image" src="https://pbs.twimg.com/profile_images/1367165480725790726/BR2kkGVs_400x400.jpg">
+              </div>
+              <p class="task-due-date">June 23</p>
+              <div class="task-icons">
+                <span class="icon-number">2</span>
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </app-custom-checkbox>
+    </div>
+    <h3>Meetings</h3>
+    <div class="meetings-example">
+      <ion-card class="meeting-wrapper" [style.--card-color]="'234, 99, 140'">
+        <ion-card-content class="meeting-card-content">
+          <ion-row>
+            <ion-col>
+              <p class="meeting-title">Product Planning</p>
+              <p class="meeting-hours">10:00 am - 11:00 am</p>
+              <div class="followers-list">
+                <div class="follower-image-container">
+                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
+                </div>
+                <div class="follower-image-container">
+                  <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
+                </div>
+                <div class="follower-image-container">
+                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
+                </div>
+              </div>
+            </ion-col>
+            <ion-col size="2" class="checkbox-col">
+              <ion-checkbox class="attending-checkbox" checked></ion-checkbox>
+              <p class="confirm-text">Confirm</p>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="meeting-wrapper" [style.--card-color]="'42, 68, 148'">
+        <ion-card-content class="meeting-card-content">
+          <ion-row>
+            <ion-col>
+              <p class="meeting-title">PWA Session</p>
+              <p class="meeting-hours">11:30 am - 12:00 am</p>
+              <div class="followers-list">
+                <div class="follower-image-container">
+                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
+                </div>
+                <div class="follower-image-container">
+                  <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
+                </div>
+                <div class="follower-image-container">
+                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
+                </div>
+              </div>
+            </ion-col>
+            <ion-col size="2" class="checkbox-col">
+              <ion-checkbox class="attending-checkbox"></ion-checkbox>
+              <p class="confirm-text">Confirm</p>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
