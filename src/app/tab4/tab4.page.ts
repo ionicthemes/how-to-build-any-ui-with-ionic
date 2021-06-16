@@ -40,6 +40,12 @@ export class Tab4Page {
     this.exampleForm = new FormGroup({
       interests: new FormArray(this.interestsList.map(x => new FormControl(x.selected)), CheckboxCheckedValidator.minSelectedCheckboxes(2))
     });
+
+    this.exampleForm.get('interests').valueChanges
+    .subscribe(values => {
+      // reset the submitted values string
+      this.submitSuccess = '';
+    });
   }
 
   onSubmit() {
@@ -48,7 +54,9 @@ export class Tab4Page {
     this.exampleForm.value.interests
     .filter((value: any) => value != null)
     .map((value: any, index: number) => {
-      selectedInterests.push(this.interestsList[index].name);
+      if (value) {
+        selectedInterests.push(this.interestsList[index].name);
+      }
     });
 
     this.submitSuccess = 'Submitted values: ' + selectedInterests;

@@ -47,8 +47,8 @@
   }
 }
 
-.submit-btn {
-  margin-top: 40px;
+.interest-options {
+  margin-bottom: 40px;
 }
 
 .error-message-container {
@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     color: var(--ion-color-danger);
-    font-size: 14px;
+    font-size: 18px;
 
     ion-icon {
       padding-inline-end: 4px;
@@ -70,7 +70,7 @@
     margin: 8px 0px;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 18px;
 
     ion-icon {
       padding-inline-end: 4px;

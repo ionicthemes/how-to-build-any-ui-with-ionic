@@ -20,7 +20,7 @@
     <p class="ion-text-center">Select at least 2 options.</p>
 
     <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
-      <ion-row>
+      <ion-row class="interest-options">
         <ion-col size="6" formArrayName="interests" *ngFor="let interest of exampleForm.controls.interests.controls; let i=index;">
           <app-custom-checkbox class="custom-checkbox">
             <div class="checkbox-content" [style.--img-src]="interestsList[i].image">
@@ -30,13 +30,13 @@
           </app-custom-checkbox>
         </ion-col>
       </ion-row>
-      <ion-button class="submit-btn" expand="block" type="submit" fill="solid" [disabled]="!exampleForm.valid">SUBMIT</ion-button>
       <div class="error-message-container" *ngIf="!exampleForm.valid">
         <div class="error-message">
           <ion-icon name="information-circle-outline"></ion-icon>
           <span>{{ submitError }}</span>
         </div>
       </div>
+      <ion-button class="submit-btn" expand="block" type="submit" fill="solid" [disabled]="!exampleForm.valid">SUBMIT</ion-button>
       <div class="success-message-container" *ngIf="exampleForm.valid && submitSuccess">
         <div class="success-message">
           <ion-icon name="checkmark-circle-outline"></ion-icon>
