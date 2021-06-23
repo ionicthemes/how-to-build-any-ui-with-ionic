@@ -1,5 +1,5 @@
-.custom-mark-add {
-  --checkmark-color: #FFF;
+.custom-mark-plus {
+  --checkmark-color: var(--ion-color-success-contrast);
   --checkmark-width: 4px;
   --background-checked: var(--ion-color-success);
   --border-color-checked: var(--ion-color-success);
@@ -9,7 +9,6 @@
 
   &::part(mark) {
     // this is the svg of the checkbox icon
-    // add icon
     d: path("M18.75 12H5.25M12 5.25V18.75V5.25Z");
   }
 }

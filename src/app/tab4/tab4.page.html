@@ -24,7 +24,7 @@
         <ion-col size="6" formArrayName="interests" *ngFor="let interest of exampleForm.controls.interests.controls; let i=index;">
           <app-custom-checkbox class="custom-checkbox">
             <div class="checkbox-content" [style.--img-src]="interestsList[i].image">
-              <ion-label class="checkbox-title"> {{interestsList[i].name}}</ion-label>
+              <ion-label class="checkbox-title">{{interestsList[i].name}}</ion-label>
               <ion-checkbox class="checkbox-item" [formControl]="interest"></ion-checkbox>
             </div>
           </app-custom-checkbox>

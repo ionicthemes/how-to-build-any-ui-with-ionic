@@ -38,7 +38,14 @@ export class Tab4Page {
 
   constructor() {
     this.exampleForm = new FormGroup({
-      interests: new FormArray(this.interestsList.map(x => new FormControl(x.selected)), CheckboxCheckedValidator.minSelectedCheckboxes(2))
+      // FormArray aggregates the values of each child FormControl into an array
+      interests: new FormArray(
+        // creates a FormControl for each 'Interest' from our interestsList
+        // defined above and sets its selected value to 'true' or 'false'
+        this.interestsList.map(x => new FormControl(x.selected)),
+        // adds a custom validator that requires at least 2 checkboxes to be selected
+        CheckboxCheckedValidator.minSelectedCheckboxes(2)
+      )
     });
 
     this.exampleForm.get('interests').valueChanges
@@ -52,7 +59,6 @@ export class Tab4Page {
     const selectedInterests = [];
 
     this.exampleForm.value.interests
-    .filter((value: any) => value != null)
     .map((value: any, index: number) => {
       if (value) {
         selectedInterests.push(this.interestsList[index].name);

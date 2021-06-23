@@ -50,7 +50,7 @@
           <app-custom-checkbox class="custom-checkbox">
             <div class="checkbox-content" [style.--img-src]="'url(https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg?auto=compress&cs=tinysrgb)'">
               <ion-label class="checkbox-title">Fashion</ion-label>
-              <ion-checkbox class="checkbox-item" value="fashion"></ion-checkbox>
+              <ion-checkbox class="checkbox-item" value="fashion" checked></ion-checkbox>
             </div>
           </app-custom-checkbox>
         </ion-col>
@@ -59,7 +59,14 @@
 
     <h1 class="ion-text-center">Other UI examples</h1>
     <p class="ion-text-center">Using the same Ion Checkbox</p>
-    <h3>Tasks</h3>
+
+    <ion-list-header>
+      <ion-label>Tasks</ion-label>
+      <ion-button>
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+
+    </ion-list-header>
     <div class="tasks-example">
       <app-custom-checkbox class="task-wrapper">
         <ion-card>
@@ -104,58 +111,70 @@
         </ion-card>
       </app-custom-checkbox>
     </div>
-    <h3>Meetings</h3>
+
+
+    <ion-list-header>
+      <ion-label>Meetings</ion-label>
+      <ion-button>
+        See All
+      </ion-button>
+
+    </ion-list-header>
     <div class="meetings-example">
-      <ion-card class="meeting-wrapper" [style.--card-color]="'234, 99, 140'">
-        <ion-card-content class="meeting-card-content">
-          <ion-row>
-            <ion-col>
-              <p class="meeting-title">Product Planning</p>
-              <p class="meeting-hours">10:00 am - 11:00 am</p>
-              <div class="followers-list">
-                <div class="follower-image-container">
-                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
+      <app-custom-checkbox class="meeting-wrapper">
+        <ion-card class="meeting-card" [style.--card-color]="'234, 99, 140'">
+          <ion-card-content class="meeting-card-content">
+            <ion-row>
+              <ion-col>
+                <p class="meeting-title">Product Planning</p>
+                <p class="meeting-hours">10:00 am - 11:00 am</p>
+                <div class="followers-list">
+                  <div class="follower-image-container">
+                    <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
+                  </div>
+                  <div class="follower-image-container">
+                    <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
+                  </div>
+                  <div class="follower-image-container">
+                    <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
+                  </div>
                 </div>
-                <div class="follower-image-container">
-                  <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
+              </ion-col>
+              <ion-col size="2" class="checkbox-col">
+                <ion-checkbox class="attending-checkbox" checked></ion-checkbox>
+                <p class="confirm-text">Confirm</p>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </app-custom-checkbox>
+      <app-custom-checkbox class="meeting-wrapper">
+        <ion-card class="meeting-card" [style.--card-color]="'42, 68, 148'">
+          <ion-card-content class="meeting-card-content">
+            <ion-row>
+              <ion-col>
+                <p class="meeting-title">PWA Session</p>
+                <p class="meeting-hours">11:30 am - 12:00 am</p>
+                <div class="followers-list">
+                  <div class="follower-image-container">
+                    <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
+                  </div>
+                  <div class="follower-image-container">
+                    <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
+                  </div>
+                  <div class="follower-image-container">
+                    <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
+                  </div>
                 </div>
-                <div class="follower-image-container">
-                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
-                </div>
-              </div>
-            </ion-col>
-            <ion-col size="2" class="checkbox-col">
-              <ion-checkbox class="attending-checkbox" checked></ion-checkbox>
-              <p class="confirm-text">Confirm</p>
-            </ion-col>
-          </ion-row>
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="meeting-wrapper" [style.--card-color]="'42, 68, 148'">
-        <ion-card-content class="meeting-card-content">
-          <ion-row>
-            <ion-col>
-              <p class="meeting-title">PWA Session</p>
-              <p class="meeting-hours">11:30 am - 12:00 am</p>
-              <div class="followers-list">
-                <div class="follower-image-container">
-                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/44.jpg">
-                </div>
-                <div class="follower-image-container">
-                  <img class="follower-image add-overlay" src="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg">
-                </div>
-                <div class="follower-image-container">
-                  <img class="follower-image add-overlay" src="https://randomuser.me/api/portraits/women/49.jpg">
-                </div>
-              </div>
-            </ion-col>
-            <ion-col size="2" class="checkbox-col">
-              <ion-checkbox class="attending-checkbox"></ion-checkbox>
-              <p class="confirm-text">Confirm</p>
-            </ion-col>
-          </ion-row>
-        </ion-card-content>
-      </ion-card>
+              </ion-col>
+              <ion-col size="2" class="checkbox-col">
+                <ion-checkbox class="attending-checkbox"></ion-checkbox>
+                <p class="confirm-text">Confirm</p>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </app-custom-checkbox>
     </div>
   </div>
 </ion-content>
