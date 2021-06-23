@@ -6,6 +6,6 @@ In this talk I show different strategies you can use to customize and extend the
 
 [Online Demo](https://ioniconf-2021.web.app/tabs/tab1)
 
-[Slides](https://ioniconf-2021.web.app/tabs/tab1)
+[Slides](https://www.canva.com/design/DAEgFuL6iWg/Eul1PI4-mi-n3qBTTQkExA/view)
 
 If you have any questions or feedback feel free to reach out to me at [Twitter](https://twitter.com/dayujabif).
