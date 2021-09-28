@@ -6,6 +6,7 @@ In this post we discuss different strategies you can use to customize and extend
 
 Hopefully you would learn how to approach the task of building reusable UI kits or design systems and create your own components to improve the efficiency in future projects.
 
-[Demo](https://ioniconf-2021.web.app/)
+- [DEMO](https://ioniconf-2021.web.app/) 
+- [TUTORIAL](https://ionicthemes.com/tutorials/how-to-build-any-ui-with-ionic) 
 
 ![](https://static.ionicthemes.com/freebies/customizing-ionic-components-freebie.png)
